@@ -5,9 +5,14 @@ Username:ErnadoO
 WWW:http://www.deadzone-fr.com
 Modifier par frederic14 pour phpbb 3.1.x
 
-Cette extension permet de mettre en place sur son forum un formulaire de présentation dans un forum dédié à cela.
-Il sagit de champs à remplir par l'utilisateur quans il fait sa presentation.
-L'utilisateur ne peut pas les supprimer pour remplir sa presentation.
-Ce formulaire permet d'avoir une presention standardiser avec des champs precis que vous pouvez personnaliser. Vous pouvez modifier ses champs dans le fichier de langue. Pour le fonctionnement, il faut ouvrir  
-ext/fredric14/presentation/event/presentation_form.php  et changer le 3 ligne 36 "$forum_id = 3"par l'ID de votre section presentation.
-Pour connaitre l'id de votre forum, aller dans la rubrique presentation, et dans la barre d'adresse, trouver : "viewforum.php?f=22" , ici 22 pour l'exemple
+Cette extension permet de mettre en place sur son forum un formulaire de présentation  
+dans un forum dédié à cela.
+Il sagit de champs à remplir par l'utilisateur quand il fait sa présentation.
+L'utilisateur ne peut pas les supprimer pour remplir sa présentation.
+Ce formulaire permet d'avoir une présentions standardiser avec des champs précis que  
+vous pouvez personnaliser. Vous pouvez modifier ses champs dans le fichier de langue.  
+Pour le fonctionnement, il faut ouvrir  
+ext/fredric14/presentation/event/presentation_form.php  et changer le 3 ligne 36  
+"$forum_id = 3"par l'ID de votre section présentation.
+Pour connaitre l'id de votre forum, aller dans la rubrique présentation, et dans la  
+barre d'adresse, trouver : "viewforum.php?f=22" , ici 22 pour l'exemple.
