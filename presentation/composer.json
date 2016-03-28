@@ -1,9 +1,7 @@
 {
 	"name": "frederic14/presentation",
 	"type": "phpbb-extension",
-	"description": "Ce formulaire permet d'avoir une presention standardiser avec des champs precis que vous pouvez personnaliser. 
-	Vous pouvez modifier ses champs dans le fichier de langue. 
-	Pour le fonctionnement, il faut ouvrir  ext/fredric14/presentation/event/presentation_form.php  et changer le 3 ligne 36 par l'ID de votre section presentation",
+	"description": "Voir fichier aide.txt en cours de redaction",
 	"homepage": "http://www.phpbb-fr.com/",
 	"version": "1.0.0",
 	"keywords": ["phpbb", "extension"],
