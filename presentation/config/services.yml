@@ -1,0 +1,31 @@
+services:      
+    frederic14.presentation.controller:
+        class: frederic14\presentation\controller\main_controller
+        arguments:
+            - @config
+            - @request
+            - @pagination
+            - @dbal.conn
+            - @auth
+            - @template
+            - @user
+            - @controller.helper
+            - %core.root_path%
+            - %core.php_ext%
+   
+    frederic14.presentation.listener:
+        class: frederic14\presentation\event\listener
+        tags:
+            - { name: event.listener }
+	
+
+    frederic14.presentation.listener:
+        class: frederic14\presentation\event\listener
+        tags:
+            - { name: event.listener 
+			
+    frederic14.presentation.listener:
+        class: frederic14\presentation\event\presentationform
+        tags:
+            - { name: event.presentationform }
+			

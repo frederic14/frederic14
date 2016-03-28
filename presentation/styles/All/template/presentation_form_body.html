@@ -1,0 +1,112 @@
+<!-- INCLUDE overall_header.html -->
+
+<!-- IF S_FORUM_RULES -->
+	<div class="rules">
+		<div class="inner"><span class="corners-top"><span></span></span>
+		
+		<!-- IF U_FORUM_RULES -->
+			<a href="{U_FORUM_RULES}">{L_FORUM_RULES}</a>
+		<!-- ELSE -->
+			<strong>{L_FORUM_RULES}</strong><br />
+			{FORUM_RULES}
+		<!-- ENDIF -->
+		
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+<!-- ENDIF -->
+
+<!-- IF S_DISPLAY_PREVIEW --><!-- INCLUDE posting_preview.html --><!-- ENDIF -->
+
+<form id="postform" method="post" action="{S_POST_ACTION}">
+<div class="panel">
+	<div class="inner"><span class="corners-top"><span></span></span>
+
+	<h2>{L_TITLE}</h2>
+	<fieldset>
+	<!-- IF ERROR --><dl><dd class="error">{ERROR}</dd></dl><!-- ENDIF -->
+	<dl>
+		<td colspan="2"><span>{L_FIELDS}</span></td>
+	</dl>
+	<dl>
+		<dt><label for="username" >{L_USERNAME}:*</label></dt>
+		<dd><input type="text" tabindex="1" name="username" id="username" size="25" value="{USERNAME}" class="inputbox" disabled="disabled" /></dd>
+	</dl>
+	<dl>
+		<dt><label for="presentation" >{L_PRESENTATION}:*</label><br /><br />
+				<span>{BBCODE_STATUS}<br />
+				<!-- IF S_BBCODE_ALLOWED -->
+				{IMG_STATUS}<br />
+				{FLASH_STATUS}<br />
+				{URL_STATUS}<br />
+				{SMILIES_STATUS}
+				<!-- ENDIF -->
+			</span></dt>
+		<dd>
+          <textarea tabindex="2" name="presentation" id="presentation" cols="35" rows="5" class="inputbox" />{PRESENTATION}</textarea>
+        </dd>
+	</dl>
+	<dl>
+		<dt><label for="loisirs" >{L_LEISURE}:</label></dt>
+		<dd><label for="loisir_1"><input type="checkbox" name="loisir[]" value="{L_LOISIR_1}" />
+			{L_LOISIR_1}&nbsp;&nbsp;</label>
+			<label for="loisir_2"><input type="checkbox" name="loisir[]" value="{L_LOISIR_2}" />
+			{L_LOISIR_2}&nbsp;&nbsp;</label>
+			<label for="loisir_3"><input type="checkbox" name="loisir[]" value="{L_LOISIR_3}" />
+			{L_LOISIR_3}&nbsp;&nbsp;</label> 
+			<label for="loisir_4"><input type="checkbox" name="loisir[]" value="{L_LOISIR_4}" />
+			{L_LOISIR_4}&nbsp;&nbsp;</label>
+			<label for="loisir_5"><input type="checkbox" name="loisir[]" value="{L_LOISIR_5}" />
+			{L_LOISIR_5}&nbsp;&nbsp;</label> 
+			<label for="loisir_6"><input type="checkbox" name="loisir[]" value="{L_LOISIR_6}" />
+			{L_LOISIR_6}&nbsp;&nbsp;</label>
+			<label for="loisir_7"><input type="checkbox" name="loisir[]" value="{L_LOISIR_7}" />
+			{L_LOISIR_7}&nbsp;&nbsp;</label> 
+			<label for="loisir_8"><input type="checkbox" name="loisir[]" value="{L_LOISIR_8}" />
+			{L_LOISIR_8}&nbsp;&nbsp;</label>
+			<label for="loisir_9"><input type="checkbox" name="loisir[]" value="{L_LOISIR_9}" />
+			{L_LOISIR_9}&nbsp;&nbsp;</label>
+			<label for="loisir_10"><input type="checkbox" name="loisir[]" value="{L_LOISIR_10}" />
+			{L_LOISIR_10}&nbsp;&nbsp;</label> 
+			<label for="loisir_11"><input type="checkbox" name="loisir[]" value="{L_LOISIR_11}" />
+			{L_LOISIR_11}&nbsp;&nbsp;</label>
+			<label for="loisir_12"><input type="checkbox" name="loisir[]" value="{L_LOISIR_12}" />
+			{L_LOISIR_12}&nbsp;&nbsp;</label> 
+			<label for="loisir_13"><input type="checkbox" name="loisir[]" value="{L_LOISIR_13}" />
+			{L_LOISIR_13}&nbsp;&nbsp;</label>
+			<label for="loisir_14"><input type="checkbox" name="loisir[]" value="{L_LOISIR_14}" />
+			{L_LOISIR_14}&nbsp;&nbsp;</label> 
+			<label for="loisir_15"><input type="checkbox" name="loisir_15" value="{L_LOISIR_15}" />
+			{L_LOISIR_15}&nbsp;&nbsp;</label></dd>
+	</dl>
+	<dl>
+		<dt><label for="qualities" >{L_QUALITIES}:*</label></dt>
+		<dd><input type="text" tabindex="3" name="qu" id="qualities" size="25" value="{QUALITES}" class="inputbox" /></dd>
+	</dl>
+	<dl>
+		<dt><label for="defects" >{L_DEFECTS}:*</label></dt>
+		<dd><input type="text" tabindex="4" name="de" id="defects" size="25" value="{DEFAUTS}" class="inputbox" /></dd>
+	</dl>
+	<dl>
+		<dt><label for="info" >{L_INFO}:*</label></dt>
+		<dd>
+          <textarea tabindex="5" name="info" id="info" cols="35" rows="5" class="inputbox" />{INFO}</textarea>
+        </dd>
+	</dl>
+	<dl>
+		<dt><label for="adresse" >{L_ADRESSE}:</label></dt>
+		<dd><input type="text" tabindex="6" name="adresse" id="adresse" size="25" value="{ADRESSE}" class="inputbox" /></dd>
+	</dl>
+</fieldset>
+<span class="corners-bottom"><span></span></span></div>
+</div>
+	<div class="panel bg2">
+	    <div class="inner"><span class="corners-top"><span></span></span>
+			<fieldset class="submit-buttons"> 
+      			{S_FORM_TOKEN} 
+				<input type="submit" tabindex="7" name="preview" value="{L_PREVIEW}" class="button1" onclick="document.getElementById('postform').action += '#preview';" />&nbsp;
+				<input type="submit" accesskey="s" tabindex="8" name="post" value="{L_SUBMIT}" class="button1" />&nbsp;
+			</fieldset>
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+</form>
+<!-- INCLUDE overall_footer.html -->
