@@ -28,6 +28,7 @@ class listener implements EventSubscriberInterface
     {
         return array(
             'core.user_setup'                        => 'load_language_on_setup',
+			'core.modify_posting_parameters'          => 'load_presentationform',
         );
     }
     
@@ -36,7 +37,7 @@ class listener implements EventSubscriberInterface
         $lang_set_ext = $event['lang_set_ext'];
         $lang_set_ext[] = array(
             'ext_name' => 'frederic14/presentation',
-            'lang_set' => 'common',
+            'lang_set' => 'presentation_form',
         );
         $event['lang_set_ext'] = $lang_set_ext;
     }
